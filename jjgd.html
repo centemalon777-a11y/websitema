@@ -1,0 +1,65 @@
+.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Work, Energy, and Power Quiz</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .question { margin-bottom: 20px; }
+    button { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Work, Energy, and Power Quiz (30 Questions)</h2>
+  <form id="quizForm"></form>
+  <button onclick="submitQuiz()">Submit</button>
+  <div id="result"></div>
+
+  <script>
+    const questions = [
+      { q: "1. What is the SI unit of work?", a: "Joule" },
+      { q: "2. Work done is zero when the angle between force and displacement is?", a: "90 degrees" },
+      { q: "3. Power is defined as?", a: "Work done per unit time" },
+      { q: "4. The unit of power is?", a: "Watt" },
+      { q: "5. 1 horsepower is equal to?", a: "746 watts" },
+      { q: "6. Kinetic energy depends on?", a: "Mass and velocity" },
+      { q: "7. Potential energy is the energy due to?", a: "Position" },
+      { q: "8. The law of conservation of energy states?", a: "Energy can neither be created nor destroyed" },
+      { q: "9. A machine's efficiency is always less than?", a: "100%" },
+
+{ q: "27. The formula for power is?", a: "Work/time" },
+      { q: "28. Energy from the sun is?", a: "Solar energy" },
+      { q: "29. Renewable energy source?", a: "Wind" },
+      { q: "30. Which of these is not a form of energy? (a) Heat (b) Mass (c) Chemical (d) Sound", a: "Mass" }
+    ];
+
+    const quizForm = document.getElementById("quizForm");
+
+    questions.forEach((item, index) => {
+      quizForm.innerHTML += `
+        <div class="question">
+          <label>item.q</label><br>
+          <input type="text" id="q{index}" />
+        </div>
+      `;
+    });
+
+    function submitQuiz() {
+      let score = 0;
+      questions.forEach((item, index) => {
+        const userAnswer = document.getElementById("q" + index).value.trim().toLowerCase();
+        const correctAnswer = item.a.toLowerCase();
+        if (userAnswer === correctAnswer) {
+          score++;
+        }
+      });
+      document.getElementById("result").innerHTML = <h3>You scored score out of{questions.length}</h3>;
+    }
+  </script>
+</body>
+</html>
+```
+

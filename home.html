@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* ...existing code... */
+.sliding-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  overflow: hidden;
+  background: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.sliding-bg span {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  padding-left: 100vw;
+  animation: slide-welcome 8s linear infinite;
+  letter-spacing: 2px;
+}
+
+@keyframes slide-welcome {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120vw);
+  }
+}
+
+/* Add padding-top to body to prevent content from hiding under the bar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  background-color: #93b6da
+}
+/* ...existing code... */
+.buttons {
+  padding: 10px 20px;
+  background:   white;
+  color:rgb(196, 19, 19);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+.h1{
+  color: #fff;
+
+}
+</style>
+</head>
+<body>
+    <div class="sliding-bg">
+    <span>WELCOME TO QUIZ HUB</span>
+   
+  </div>
+   
+  <header>
+    <center>
+    <div class="h1">
+<h3>
+Welcome to Quiz Hub — your ultimate destination for fun, interactive, and educational quizzes!
+
+Whether you're here to test your knowledge, challenge your friends, or simply learn something new, you're in the right place. At Quiz Hub, we believe learning should be engaging, exciting, and accessible to everyone.
+
+So get ready, stay focused, and enjoy the experience. Let the quiz begin!
+</h3><a href="bg.html"><button>NEXT</button></a>
+</div>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+</html>
